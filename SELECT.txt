@@ -1,0 +1,18 @@
+-SELECT * FROM Barang ORDER BY Nama ASC //urutin nama dari A ke Z
+-SELECT * FROM Barang ORDER BY Harga ASC //urutin dari harga termurah
+-SELECT * FROM Barang //nampilin semua barang (randomize)
+-SELECT  Nama.Br, Jenis.Br, jumlah.Bl, TotalHrgBrg.Bl
+
+	 FROM Barang
+ Br
+	 JOIN Beli Bl ON ID_Barang.Br = ID_Barang.Bl   //untuk melihat total 							harga barang yang dibeli
+
+-SELECT Nama, jenis, harga, Jenis_Pengiriman.p
+	FROM Barang
+	JOIN Pengiriman p ON ID_Pengiriman.b=ID_Pengiriman.p //Melihat jenis 						pengiriman dari barang tersebut
+
+-SELECT Nama_Pembeli.p, Tgl_Transkasi, Total_Harga
+	FROM Transaksi t
+	JOIN Pembeli p ON ID_user.t = ID_ user.p //Lihat total transaksi pembelian
+
+
