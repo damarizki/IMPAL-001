@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Booking Hotel" />
+	<meta name="keywords" content="Booking Hotel Murah" />
+	<meta name="author" content="CS-40-01" />
+	<!-- Favicons -->
+    <link rel="apple-touch-icon" href="img/icon.png">
+    <link rel="icon" href="img/icon.png">
+	<title>
+        Locoshop | Support our local brand
+    </title>
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+<body>
+	</br>
+	<h1 id="logo">Locoshop</h1>
+	<h2 id="sign">Locoshop</h2>
+	<div class="sign-up">
+		<form action="sign-up.php" method="post" onSubmit="return validasi()">
+			<div>
+				<label id="nama">Username</label>
+				</br>
+				<input type="text" name="username" id="name" placeholder="Input username here"/>
+			</div>
+			<div>
+			</br>
+			<div>
+				<label id="nama">Email</label>
+				</br>
+				<input type="email" class="form-control" name="email" id="name" aria-describedby="emailHelp" placeholder="Enter email">
+			</div>
+			<div>
+			</br>
+				<label id="nama">Password</label>
+				</br>
+				<input type="password" name="password" id="name" placeholder="Input password here"/>
+			</div>
+			</br>
+				<label id="nama">Phone Number</label>
+				<input type="text" name="phonenumber" onkeypress="return hanyaAngka(event, false)" id="name" placeholder="Input phone number here" maxlength="12"/>
+			</div>
+            <div>
+			</br>
+				<label id="nama">Address</label></br>
+				<textarea placeholder="Input address here" name="address" id="address">
+				</textarea>
+			</div>
+			<div>
+			</br>
+            
+				<input type="submit" value="DAFTAR" id="signup"button class="btn btn-primary"> 
+			</div>
+		</form>
+	</div>
+<script>	
+	function hanyaAngka(e, decimal) { 
+    var key;
+    var keychar;
+     if (window.event) {
+         key = window.event.keyCode;
+     } else
+     if (e) {
+         key = e.which;
+     } else return true;
+    
+    keychar = String.fromCharCode(key);
+    if ((key==null) || (key==0) || (key==8) ||  (key==9) || (key==13) || (key==27) ) {
+        return true;
+    } else 
+    if ((("0123456789").indexOf(keychar) > -1)) {
+        return true; 
+    } else 
+    if (decimal && (keychar == ".")) {
+        return true; 
+    } else
+		alert('Mohon input angka !');
+		return false; 
+    }
+</script>
+	
+<script type="text/javascript">
+	function validasi() {
+		var username = document.getElementById("name").value;	
+		var address = document.getElementById("address").value;
+		var debitcard = document.getElementById("debitcard").value;			
+		if (username != "" && address != "") {
+			return true;
+		}else{
+			alert('Harap diisi form yang masih kosong');
+			return false;
+		}
+	}
+ 
+</script>
+	
+</body>
+</html>
